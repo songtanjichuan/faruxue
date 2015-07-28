@@ -1,0 +1,60 @@
+<style type="text/css">
+    .nav-bg {
+        /*background-color: #666699;*/
+        background-color: #003366;
+        /*background-color: #663366;*/
+        margin-bottom: -20px;
+    }
+    .nav-cl {
+        color: #FFFFFF;
+    }
+
+    .btn-cl {
+        /*background-color: #FF9966;*/
+    }
+    .btn-mt{
+        margin-top: 8px;
+    }
+</style>
+<nav class="navbar navbar-inverse navbar-static-top nav-bg">
+    <div class="container nav-cl">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="/">ReadCode</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="/home">javascript</a></li>
+                <li><a href="#">nodejs</a></li>
+                <li><a href="#">http</a></li>
+                <li><a href="#">github</a></li>
+                <li><a href="/interFlow">交流专区</a></li>
+                <li><a href="/write">交流专区</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">有媛人</a></li>
+                <li><a href="#">有猿人</a></li>
+                <!--<li><a href="/"><img src="#"/></a></li>-->
+                <%if(!user){%>
+                <li>
+                    <div class="btn-group btn-mt" role="group" aria-label="...">
+                        <a href="/login"><input type="button" class="btn btn-default btn-cl" value="Sign in"/></a>
+                        <a href="/register"><input type="button" class="btn btn-success" value="Sing up"/></a>
+                    </div>
+                </li>
+                <%}else{%>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%=user.name%> <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">账号设置</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">退出</a></li>
+                    </ul>
+                </li>
+                <%}%>
+            </ul>
+
+        </div>
+    </div>
+</nav>

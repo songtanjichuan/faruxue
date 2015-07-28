@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <script src="/javascripts/sign.js"></script>
+    <style type="text/css">
+        .row {
+            margin-top: 110px;
+            margin-bottom: 40px;
+        }
+
+        #login-user {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<%include header%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-2">
+            <img src="/images/login.png"/>
+        </div>
+        <div class="panel panel-default col-md-4 col-md-offset-2">
+            <div class="panel-body" id="login-user">
+                <form class="form-horizontal" role="form" method="post">
+                    <p>账号注册</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 记住我
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-success btn-lg btn-block" onclick="register()" value="注册">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%include footer%>
+<script src="/javascripts/jquery-2.1.1.min.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+
+</body>
+</html>

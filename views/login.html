@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <script src="/javascripts/jquery-2.1.1.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+	<script src="/javascripts/sign.js"></script>
+    <style type="text/css">
+        .row {
+            margin-top: 110px;
+            margin-bottom: 40px;
+        }
+        #login-user {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<%include header%>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-md-offset-2">
+            <img src="/images/login.png"/>
+        </div>
+        <div class="panel panel-default col-md-4 col-md-offset-2">
+            <div class="panel-body" id="login-user">
+                <form class="form-horizontal" role="form" method="post">
+                    <p>账号登录</p>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="password" name="password"
+                               placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox"> 记住我
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-success btn-lg btn-block" onclick="login()" value="登录">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<%include footer%>
+</body>
+</html>
