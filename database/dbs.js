@@ -12,7 +12,7 @@ var _getModel= function (type){
 }
 var _connect = function (type) {
     if (type) {
-        mongoose.connect('mongodb://localhost:27017/node');
+        mongoose.connect('mongodb://localhost:27017/test');
         mongoose.connection.on('error', function (error) {
             console.log('数据库连接失败：' + error);
         });
